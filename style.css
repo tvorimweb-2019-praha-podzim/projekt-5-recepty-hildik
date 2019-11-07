@@ -8,10 +8,19 @@ html { box-sizing: border-box; }
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-size: 14px;
 }
 
 h2 {
     margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    margin:0;
+    font-size: 28px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -25,18 +34,115 @@ h2 {
     color: silver;
 }
 
-/* -------------------------------------------------- */
+.hlavniRecept{
+    background-image: url("images/burger.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+    padding: 10px;
+    position: relative;
+}
 
-/*
-pouzivame mobile first pristup
-tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
-s pribyvajici sirkou pridavame media query pro...
-tablety:
+.small {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 90px;
+    padding: 10px;
+    position: relative;
+}
+
+.receptMeta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receptNazev {
+    position: absolute;
+    bottom: 10px;
+}
+
+.receptRecept2 {
+    background-image: url("images/sushi.jpg");
+}
+
+.receptRecept3 {
+    background-image: url("images/rajcata.jpg");
+}
+
+.receptRecept4 {
+    background-image: url("images/kure.jpg");
+} 
+
+.receptRecept5 {
+    background-image: url("images/grilovani.jpg");
+} 
+
+.doporucujeme {
+    display: flex;
+    flex-direction: column;
+}
+
+/* tablet */
 @media (min-width: 480px) {
-}
-notebook/pc:
-@media (min-width: 860px) {
-}
-*/
+    h1 {
+        font-size: 36px;
+        bottom: 20px;
+    }
 
-/* tvoje styly sem */
+    h2{
+        font-size: 22px;
+    }
+
+.hlavniRecept {
+    padding: 20px;
+    min-height: 250px;
+    width: 100%;
+}
+
+.small {
+    padding: 20px;
+    min-height: 150px;
+}
+
+.sloupec{
+    width: 50%;
+}
+
+.doporucujeme {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+}
+
+
+
+
+/* notebook/pc: */
+@media (min-width: 860px) {
+    h1 {
+        font-size:48px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    .hlavniRecept {
+        min-height: 400px;
+        /* width:33.33%; */
+    }
+    
+    .small {
+        min-height: 200px;
+        /* width:33%; */
+    }
+
+.doporucujeme {
+    flex-wrap: nowrap;
+} 
+
+
+}
+
